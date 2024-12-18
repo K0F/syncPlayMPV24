@@ -1,0 +1,2 @@
+#!/bin/bash
+ffmpeg -fflags +genpts -re -loop 1 -i /home/kof/kof24radio.png -re -f pulse -i radiokof -bufsize 1500k -c:v libx264 -preset superfast -qp 23 -bufsize 1500k -pix_fmt yuv420p -g 60 -keyint_min 60 -vf "drawtext=fontfile=/path/to/font.ttf:text='%{pts\:hms}':x=10:y=10:fontsize=24:fontcolor=white:box=1:boxcolor=black@0.5" -vsync 2 -sc_threshold 0 -c:a aac -b:a 128k -ar 48000 -f flv "rtmps://live-api-s.facebook.com:443/rtmp/xxxxxxxxxxxxxx"

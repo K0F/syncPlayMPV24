@@ -4,7 +4,8 @@ _A script to play the files from one folder in time they were really recorded (a
 
 
 ## prereqs
-
-pymediainfo
-mpv
-a folder with recordings (in wav format)
+```
+  pymediainfo
+  mpv
+  and a folder with recordings (in wav format)
+```
